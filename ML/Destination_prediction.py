@@ -1,3 +1,4 @@
+# KERAS 
 import pandas as pd
 import numpy as np
 import tensorflow as tf
@@ -47,17 +48,19 @@ def top3(y_true, y_pred):
 def top5(y_true, y_pred):
     return top_k_categorical_accuracy(y_true, y_pred, k=5)
   
-#POI 임베딩 데이터 로드
+# POI 임베딩 데이터 로드
 data = pd.read_pickle('all_5poi_non_personal_sequence_dnn_data.pkl')
 uid = pd.unique(data['User_Type'])
 
-#MLP 
+# MLP 모델 학습
+# 학습 소요시간
 start_time = time.time()
 
+# 각 모델에 따른 top-1, top-3, top-5 ACC 저장
 result = {'model_num':[], 'top1':[], 'top3':[], 'top5':[]}
 num = 0
 big = []
-why = []
+
 for id in uid:
 #     if id==-1 or id==4:
 #         continue
@@ -67,8 +70,7 @@ for id in uid:
     print(id)
     print("Model num: " + str(num))
     sub_data = data[data['User_Type']==id]
-    
-    
+    # 메모리 문제로 데이터가 많은 그룹은 따로 처리
     if len(pd.unique(sub_data['REP_LAST_STN_ID'])) > 10000:
         print("too big" + str(id))
         big.append(id)
@@ -84,14 +86,6 @@ for id in uid:
     sub_data = sub_data.drop('REP_LAST_STN_ID', axis=1)
     sub_data = sub_data.drop('User_Type', axis=1) 
     sub_data = sub_data.drop('TRCR_NO', axis=1) 
-    
-    if y_len != len(one_hot[0]):
-        print("why?" + str(id))
-        why.append(id)
-        del sub_data
-        del y
-        del one_hot
-        continue
         
     scaler.fit(sub_data)
     sub_data = scaler.transform(sub_data)
@@ -103,6 +97,7 @@ for id in uid:
     del y
     del one_hot
     
+    # 도착지 예측 모델 구조 (MLP)
     c_input = Input((train_x.shape[1],))
     H = Dense(y_len//2+50)(c_input)
     H = BatchNormalization()(H)
@@ -130,18 +125,16 @@ for id in uid:
     result['top3'].append(histoy.history['val_top3'][len(histoy.epoch)-1])
     result['top5'].append(histoy.history['val_top5'][len(histoy.epoch)-1])
     
-    
-#     model_name = 'model/model_'+str(num)+'.h5' 
-#     model_mlp.save(model_name)
-    
     del train_x
     del train_y
     del test_x
     del test_y
     
     num = num + 1
+    
+    #GPU 메모리 해제
     reset_keras()
-    
-    
+
+# 학습 소요 시간 출력
 print("\n\n")
 print("---{}s seconds---".format(time.time()-start_time))

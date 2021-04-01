@@ -6,34 +6,34 @@
 
 using namespace std;
 
-#define NLayer 2			//layer 수
-#define MLayerSize 1000		//layer가 가질수 있는 최대 뉴론수 + 1
-#define m0	270				//0층
-#define m1	10				//1층 <현재 최종 출력층>
-#define N 785				//input vector수 + 1 (28x28)
+#define NLayer 2							//layer 수
+#define MLayerSize 1000							//layer가 가질수 있는 최대 뉴론수 + 1
+#define m0	270							//0층
+#define m1	10							//1층 <현재 최종 출력층>
+#define N 785								//input vector수 + 1 (28x28)
 #define LEARNINGRATE 0.35
 #define RAND_MAX 1000
 #define N_tr_examples 60000
 #define N_te_examples 10000
 
-int M[NLayer] = { m0 , m1 };//모든 층의 뉴론의 수를 가진 배열
+int M[NLayer] = { m0 , m1 };						//모든 층의 뉴론의 수를 가진 배열
 double s[NLayer][MLayerSize];
 double f[NLayer][MLayerSize];
 double delta[NLayer][MLayerSize];
-double w[NLayer][MLayerSize][MLayerSize]; // 층수-뉴론번호-가중치번호
+double w[NLayer][MLayerSize][MLayerSize]; 				// 층수-뉴론번호-가중치번호
 
-double input[N];	//input vector
-double D[m1];		//정답레이블 최종층의 출력수 만큼
+double input[N];							//input vector
+double D[m1];								//정답레이블 최종층의 출력수 만큼
 double TrainData[N_tr_examples][N - 1], d_tr[N_tr_examples][m1];	//훈련데이터 및 결과값
-double TestData[N_te_examples][N - 1], d_te[N_te_examples][m1];	//테스트데이터 및 결과값
+double TestData[N_te_examples][N - 1], d_te[N_te_examples][m1];		//테스트데이터 및 결과값
 
 void datastream_tr();
 void datastream_te();
-void initializeW();					//weight 초기화
-void initializeInput(int Trainnum);	//TrainData로부터 input vector값입력
-void initializeD(int Trainnum);		//d_tr로부터 D vector값 입력
-void initializeInput_te(int Testnum);	//TestData로부터 input vector값입력
-void initializeD_te(int Testnum);		//d_te로부터 D vector값 입력
+void initializeW();							//weight 초기화
+void initializeInput(int Trainnum);					//TrainData로부터 input vector값입력
+void initializeD(int Trainnum);						//d_tr로부터 D vector값 입력
+void initializeInput_te(int Testnum);					//TestData로부터 input vector값입력
+void initializeD_te(int Testnum);					//d_te로부터 D vector값 입력
 void forwardcomputation();
 void backwardcomputation();
 void weightupdate();
@@ -93,7 +93,7 @@ void main() {
 					break;
 				}
 			}
-			if (sys_ans == desire_ans)			//라벨과 동일하면 맞은 개수 증가
+			if (sys_ans == desire_ans)		//라벨과 동일하면 맞은 개수 증가
 				num_correct++;
 		}
 
@@ -139,10 +139,10 @@ void initializeW() {
 	for (i = 0; i < NLayer; i++) {
 		//printf("\rinitialize_%dLayer", i);
 		for (j = 0; j < M[i]; j++) {
-			if (i == 0) {//0층 뉴론 (input vector로 부터 입력 받음)
+			if (i == 0) {	//0층 뉴론 (input vector로 부터 입력 받음)
 				pre_layer = N;
 			}
-			else {//0층 이외의 뉴론 (아래층으로 부터 입력받음)
+			else {		//0층 이외의 뉴론 (아래층으로 부터 입력받음)
 				pre_layer = M[i - 1] + 1;
 			}
 			for (k = 0; k < pre_layer; k++) {

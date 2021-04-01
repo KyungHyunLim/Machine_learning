@@ -172,6 +172,7 @@ void forwardcomputation() {
 			for (j = 0; j < (M[L-1]+1); j++) {
 				s[L][i] += f[L-1][j] * w[L][i][j];
 			}
+			//Sigmoid
 			f[L][i] = 1.0 / (1.0 + exp(-s[L][i]));
 		}
 		f[L][M[L]] = 1.0;

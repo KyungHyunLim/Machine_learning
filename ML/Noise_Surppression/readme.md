@@ -12,3 +12,15 @@ Paython       3.7 <br>
 Pytorch       1.7.1 <br>
 CUDA          10.2 <br>
 Nvidia driver 442.23 <br>
+
+
+<br>
+[16KHz_DownSampling] <br>
+48kHz -> 16kHz
+
+<br>
+<br>
+[Preprocessing] <br>
+Slicing and Windowing
+overlapping 50%
+list -> torch tensor

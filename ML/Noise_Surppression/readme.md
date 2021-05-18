@@ -13,9 +13,9 @@ Pytorch       1.7.1 <br>
 CUDA          10.2 <br>
 Nvidia driver 442.23 <br>
 
-[Sources]
+[Sources]<br>
 {16KHz_DownSampling} <br>
-48kHz -> 16kHz
+48kHz -> 16kHz <br>
 <br>
 {Preprocessing} <br>
 Slicing and Windowing <br>

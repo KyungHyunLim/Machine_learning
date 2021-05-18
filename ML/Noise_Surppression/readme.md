@@ -14,13 +14,10 @@ CUDA          10.2 <br>
 Nvidia driver 442.23 <br>
 
 [Sources]
-<br>
-<16KHz_DownSampling> <br>
+{16KHz_DownSampling} <br>
 48kHz -> 16kHz
-
 <br>
-<br>
-<Preprocessing> <br>
+{Preprocessing} <br>
 Slicing and Windowing <br>
 overlapping 50% <br>
 list -> torch tensor <br>

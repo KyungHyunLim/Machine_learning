@@ -21,6 +21,6 @@ Nvidia driver 442.23 <br>
 <br>
 <br>
 [Preprocessing] <br>
-Slicing and Windowing
-overlapping 50%
-list -> torch tensor
+Slicing and Windowing <br>
+overlapping 50% <br>
+list -> torch tensor <br>

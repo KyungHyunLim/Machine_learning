@@ -23,5 +23,5 @@ overlapping 50% <br>
 list -> torch tensor <br>
 <br>
 {Model} <br>
-Define 'Discriminator' and 'Noisecanceler <br>
+Define 'Discriminator' and 'Noisecanceler(Generator)' <br>
 <img src='https://user-images.githubusercontent.com/72729802/118740417-caa6f580-b886-11eb-81cc-5049dd4b039d.png'/>

@@ -29,7 +29,7 @@ Define 'Discriminator' and 'Noisecanceler(Generator)' <br>
 Noise Discriminator ans Clean Discriminator <br>
 x : clean speech <br>
 x~: Noisy speech <br>
-x^: Generated speech <br>
+x^: Enhanced speech <br>
 n : x~ - x <br>
 n^: x~ - x^ <br>
 <img src='https://user-images.githubusercontent.com/72729802/118740899-f4ace780-b887-11eb-80cd-22b6651078e4.png'/> <br>

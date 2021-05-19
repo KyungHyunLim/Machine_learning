@@ -24,4 +24,10 @@ list -> torch tensor <br>
 <br>
 {Model} <br>
 Define 'Discriminator' and 'Noisecanceler(Generator)' <br>
-<img src='https://user-images.githubusercontent.com/72729802/118740417-caa6f580-b886-11eb-81cc-5049dd4b039d.png'/>
+
+{Model - Structure} <br>
+Noise Discriminator ans Clean Discriminator <br>
+<img src='https://user-images.githubusercontent.com/72729802/118740899-f4ace780-b887-11eb-80cd-22b6651078e4.png'/> <br>
+Whole Architecture <br>
+<img src='https://user-images.githubusercontent.com/72729802/118740902-f5457e00-b887-11eb-84c9-007544a15db1.png'/> <br>
+

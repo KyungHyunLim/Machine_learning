@@ -24,4 +24,4 @@ list -> torch tensor <br>
 <br>
 {Model} <br>
 Define 'Discriminator' and 'Noisecanceler <br>
-<img src='https://user-images.githubusercontent.com/72729802/118740265-62581400-b886-11eb-9d59-ee87c005e8f9.png'/>
+<img src='https://user-images.githubusercontent.com/72729802/118740417-caa6f580-b886-11eb-81cc-5049dd4b039d.png'/>

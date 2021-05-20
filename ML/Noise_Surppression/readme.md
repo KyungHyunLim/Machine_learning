@@ -36,3 +36,9 @@ n^: x~ - x^ <br>
 Whole Architecture <br>
 <img src='https://user-images.githubusercontent.com/72729802/118740902-f5457e00-b887-11eb-84c9-007544a15db1.png'/> <br>
 
+{Train} <br>
+- Order -
+0. Generator using MSE
+1. clean discriminator
+2. noise discriminator
+3. Generator

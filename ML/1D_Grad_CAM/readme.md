@@ -4,8 +4,8 @@ Classification Model <br>
 - 16kHz 신호 1초분량에 대해 잡음이 있는지 없는지 판별. <br>
 - Determining whether or not there is noise for 1 second of a 16 kHz signal. <br>
 
-Reference
-reference: https://github.com/GunhoChoi/Grad-CAM-Pytorch/blob/master/GradCAM_MNIST.ipynb
+Reference Code
+https://github.com/GunhoChoi/Grad-CAM-Pytorch/blob/master/GradCAM_MNIST.ipynb
 <br>
 
 Cons of CAM <br>

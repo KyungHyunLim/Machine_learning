@@ -13,8 +13,8 @@ Cons of CAM <br>
   - So, it is necessary to modify the structure of the model when obtaining inference and CAM <br>
 <br>
 Pros of Grad CAM <br>
-  - Don't have to modify the structure of the model <br>
-  - Using Back prop gradient information <br>
+  + Don't have to modify the structure of the model <br>
+  + Using Back prop gradient information <br>
 <br>
 <br>
 Example. <br>

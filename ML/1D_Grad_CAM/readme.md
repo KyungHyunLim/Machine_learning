@@ -18,4 +18,4 @@ Pros of Grad CAM <br>
 <br>
 <br>
 Example. <br>
-<img src=https://user-images.githubusercontent.com/72729802/120778067-e4bc2580-c560-11eb-9da6-eea81c1ade33.png/>
+<img src="https://user-images.githubusercontent.com/72729802/120778067-e4bc2580-c560-11eb-9da6-eea81c1ade33.png"/>

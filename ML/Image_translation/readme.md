@@ -10,8 +10,8 @@ Model info: A Neural Algorithm of Artistic Style (https://arxiv.org/abs/1508.065
 <br>
 <br>
 Style: disney<br>
-<img src="9802/122323677-6ef18a00-cf62-11eb-8a03-21c729fb97f6.jpg" width="300" height="200">
+<img src="https://user-images.githubusercontent.com/72729802/122323821-ae1fdb00-cf62-11eb-878a-3fa178eef3fe.jpg" width="300" height="200">
 <br>
 #1 Result: Fail<br>
-<img src="9802/122323668-6bf69980-cf62-11eb-8700-1b3084114a22.png" width="300" height="200">
+<img src="https://user-images.githubusercontent.com/72729802/122323829-af510800-cf62-11eb-8e09-0a5dc129f8b6.png" width="300" height="200">
 <br>
